@@ -1,3 +1,5 @@
+app.set("view engine", "ejs");
+
 const express = require("express");
 const app = express();
 const PORT = 8080; // default port 8080
@@ -18,3 +20,14 @@ app.listen(PORT, () => {
 app.get("/urls.json", (req, res) => {
   res.json(urlDatabase);
 });
+
+//curl -i http://localhost:8080/hello
+
+app.get("/set", (req, res) => {
+  const a = 1;
+  res.send(`a = ${a}`);
+ });
+ 
+ app.get("/fetch", (req, res) => {
+  res.send(`a = ${a}`);
+ });
