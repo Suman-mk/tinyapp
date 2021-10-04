@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Suman-mk/tinyapp/issues"
   },
-  "homepage": "https://github.com/Suman-mk/tinyapp#readme"
+  "homepage": "https://github.com/Suman-mk/tinyapp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
