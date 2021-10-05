@@ -1,13 +1,15 @@
-app.set("view engine", "ejs");
-
+//import external modules
 const express = require("express");
+const ejs = require('ejs')
 const app = express();
 const PORT = 8080; // default port 8080
+//const bodyParser = require("body-parser");
 const methodOverride = require("method-override"); //for changing Edit button's request to PUT request.
 const cookieSession = require("cookie-session");
+// const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
 const { generateRandomString, getUserByEmail } = require("./helpers");
-//const bodyParser = require("body-parser");
+
 //initialize middlewares
 app.use(methodOverride("_method"));
 app.use(cookieSession({
@@ -18,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // Enables body-parse
 app.set('view engine', 'ejs'); // Enables EJS for rendering the pages
 
 const urlDatabase = {
-  "b2xVn2": "http://www.lighthouselabs.ca",
-  "9sm5xK": "http://www.google.com"
+  b6UTxQ: { longURL: "https://www.example.com", userID: "aJ48lW" },
+  i3BoGr: { longURL: "https://www.google.ca", userID: "aJ48lW" },
 };
 
 app.get("/", (req, res) => {
@@ -176,12 +178,12 @@ const users = {
   "userRandomID": {
     id: "userRandomID",
     email: "user@example.com",
-    password: "lighthouse@2021"
+    password: "purple-monkey-dinosaur"
   },
   "user2RandomID": {
     id: "user2RandomID",
     email: "user2@example.com",
-    password: "lighthouse@2022"
+    password: "dishwasher-funk"
   }
 }
 
