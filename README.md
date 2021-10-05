@@ -20,5 +20,3 @@ EJS
 bcrypt
 body-parser
 cookie-session
-mocha (for tests)
-chai (for tests)
