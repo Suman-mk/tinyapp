@@ -10,6 +10,7 @@ const cookieSession = require("cookie-session");
 const bcrypt = require('bcrypt');
 const { generateRandomString, getUserByEmail } = require("./helpers");
 
+app.set("view engine", "ejs");
 //initialize middlewares
 app.use(methodOverride("_method"));
 app.use(cookieSession({
